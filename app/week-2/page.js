@@ -1,10 +1,9 @@
-import react from "react";
+import React from "react";
 
 export default function Page() {
-    return (
-      <main>
-        <h1>CPRG 306: Web Development 2 - Assignments</h1>
-        
-      </main>
-    );
-  }
+  return (
+    <main>
+      <h1>Shopping List</h1>
+    </main>
+  );
+}
