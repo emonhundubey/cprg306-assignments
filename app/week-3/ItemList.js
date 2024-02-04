@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import NewItem from "../week-4/NewItem";
 
 const ItemList = (props) => {
   const items = [
