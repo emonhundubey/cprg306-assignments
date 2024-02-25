@@ -18,22 +18,23 @@ const ItemList = () => {
   });
 
   return (
-    <div>
-      <h2>Shopping List</h2>
-      <div>
-        <button
+    <div className="m-4">
+      <div className="inline-flex items-center p-4">
+      <h2 className= "mr-2">Sort by:</h2>
+      <button 
           onClick={() => setSortBy('name')}
-          style={{ backgroundColor: sortBy === 'name' ? 'lightblue' : 'white' }}
+          className={`bg-${sortBy === 'name' ? 'orange-500' : 'orange-700'} p-1 m-2 w-28 transition-colors`}
         >
-          Sort by Name
-        </button>
-        <button
+        Name
+      </button>
+      <button
           onClick={() => setSortBy('category')}
-          style={{ backgroundColor: sortBy === 'category' ? 'lightblue' : 'white' }}
+          className={`bg-${sortBy === 'category' ? 'orange-500' : 'orange-700'} p-1 m-2 w-28 transition-colors`}
         >
-          Sort by Category
-        </button>
-      </div>
+    Category
+  </button>
+</div>
+
 
       {sortedItems.map((item) => (
         <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
