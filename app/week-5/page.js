@@ -1,8 +1,8 @@
-import React, { useClient } from 'react';
+
 import ItemList from './Item-List';
 
 const Page = (props) => {
-  useClient()
+
 
   return (
     <main className="bg-slate-950">

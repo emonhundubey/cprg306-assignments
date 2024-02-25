@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react';
 import Item from './Item';
 import itemsData from './items.json'; 
@@ -33,7 +35,6 @@ const ItemList = () => {
         </button>
       </div>
 
-      {/* Render items using the map function */}
       {sortedItems.map((item) => (
         <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
       ))}
