@@ -6,8 +6,8 @@ export default function Page() {
       <h1 className="text-4xl font-bold mb-5">CPRG 306: Web Development 2 - Assignments</h1>
       <div className="text-lg">
         <Link href="/week-2">Week 2 Assignments</Link>
-        </div>
-        <div className="text-lg">
+      </div>
+      <div className="text-lg">
         <Link href="/week-3">Week 3 Assignments</Link>
       </div>
       <div className="text-lg">
@@ -15,6 +15,9 @@ export default function Page() {
       </div>
       <div className="text-lg">
         <Link href="/week-5">Week 5 Assignments</Link>
+      </div>
+      <div className="text-lg">
+        <Link href="/week-6">Week 6 Assignments</Link>
       </div>
     </main>
   );
