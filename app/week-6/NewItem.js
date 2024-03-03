@@ -7,10 +7,10 @@ export default function NewItem({ addNewItem, bgClass, padding }) {
   const [category, setCategory] = useState("Produce");
 
   const handleForm = (event) => {
-    // prevent default submission
+    
     event.preventDefault();
 
-    // returns new added item
+  
     const addedItem = {
       name,
       quantity,
