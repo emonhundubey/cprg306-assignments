@@ -1,27 +1,23 @@
 "use client";
 import { useState } from "react";
 
-export default function NewItem({ addNewItem, bgClass, padding }) {
+export default function NewItem({ onAddItem, bgClass, padding }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [category, setCategory] = useState("Produce");
 
   const handleForm = (event) => {
-    
     event.preventDefault();
 
-  
     const addedItem = {
       name,
       quantity,
       category,
     };
-    if (addNewItem) {
-      addNewItem(addedItem);
+    if (onAddItem) {
+      onAddItem(addedItem);
     } else {
-      alert(
-        `Added item: ${name}, quantity: ${quantity}, category: ${category}`
-      );
+      console.log(addedItem);
     }
     setName("");
     setQuantity(1);
@@ -37,13 +33,13 @@ export default function NewItem({ addNewItem, bgClass, padding }) {
   const handleCategoryChange = (event) => {
     setCategory(event.target.value);
   };
-  
+
   return (
     <form
       onSubmit={handleForm}
-      className={`my-2 ${
-        bgClass ?? "bg-slate-900"
-      } text-black max-w-sm w-full p-${padding ?? 2}`}
+      className={`my-2 ${bgClass ?? "bg-slate-900"} text-black max-w-sm w-full p-${
+        padding ?? 2
+      }`}
     >
       <div className="mb-2">
         <input
@@ -85,7 +81,7 @@ export default function NewItem({ addNewItem, bgClass, padding }) {
         </select>
       </div>
       <button
-        className="w-full rounded-lg mt-4 py-2 px-4 bg-blue-500 text-white font-semibold focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 "
+        className="w-full rounded-lg mt-4 py-2 px-4 bg-blue-500 text-white font-semibold focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
         type="submit"
       >
         {" "}

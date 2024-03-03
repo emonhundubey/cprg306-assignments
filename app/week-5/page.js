@@ -1,4 +1,4 @@
-
+"use client";
 import ItemList from './Item-List';
 
 const Page = (props) => {
