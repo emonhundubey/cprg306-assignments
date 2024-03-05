@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ItemList from './Item-list';
 import itemsData from './items.json';
 import NewItem from './NewItem';
@@ -7,6 +7,10 @@ import NewItem from './NewItem';
 const Page = (props) => {
 
     const [items, setItems] = React.useState(itemsData);
+
+    useEffect(() => {
+        console.log('items', items);
+    }, [items]);
 
     const eventHandler = (newItem) => {
         setItems([...items, newItem]);

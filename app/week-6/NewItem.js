@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function NewItem({ onAddItem, bgClass, padding }) {
+export default function NewItem({ onAddItem, bgClass, padding, handleAddItem}) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [category, setCategory] = useState("Produce");
@@ -14,11 +14,9 @@ export default function NewItem({ onAddItem, bgClass, padding }) {
       quantity,
       category,
     };
-    if (onAddItem) {
-      onAddItem(addedItem);
-    } else {
-      console.log(addedItem);
-    }
+    
+      handleAddItem(addedItem);
+ 
     setName("");
     setQuantity(1);
     setCategory("produce");
