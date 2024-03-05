@@ -24,8 +24,8 @@ const ItemList = ({ items }) => {
 
   return (
     <div className="m-4">
-      <div className="inline-flex items-center p-4">
-        <h2 className="mr-2">Sort by:</h2>
+      <div className="inline-flex items-center p-2">
+        <h2 className="mr-3">Sort by:</h2>
         <button
           onClick={handleSortByName}
           className={`p-1 m-2 w-28 transition-colors ${
