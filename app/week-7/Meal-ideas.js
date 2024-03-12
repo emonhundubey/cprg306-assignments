@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 const MealIdeas = ({ ingredient }) => {
+  console.log('ingredient', ingredient);
    
     const [meals, setMeals] = useState([]);
   
@@ -29,13 +30,13 @@ const MealIdeas = ({ ingredient }) => {
     return (
       <div>
         <h2>Here are some meal ideas using {ingredient}</h2>
-        <ul>
+        {meals ? (<ul>
           {meals.map((meal) => (
             <li key={meal.idMeal}>
               {meal.strMeal}
             </li>
           ))}
-        </ul>
+        </ul>) : <p>No meal ideas found</p> }
       </div>
     );
 };

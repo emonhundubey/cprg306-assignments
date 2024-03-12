@@ -5,16 +5,20 @@ import itemsData from './items.json';
 import NewItem from './NewItem';
 import MealIdeas from './Meal-ideas';
 
+
 const Page = () => {
   const [items, setItems] = React.useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  useEffect(() => {
-    console.log('items', items);
-  }, [items]);
+  // useEffect(() => {
+  //   console.log('items', items);
+  // }, [items]);
 
-  const handleItemSelect = (selectedItem) => {
-    const cleanedItemName = selectedItem.name.trim();
+  const handleItemSelect = (itemName) => {
+    const cleanedItemName = itemName
+      .split(",")[0]
+      .trim()
+      .replace(/[^\w\s]/gi, "");
     setSelectedItemName(cleanedItemName);
   };
 
