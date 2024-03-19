@@ -1,23 +1,16 @@
-"use client"
-
-import { useUserAuth } from "./week-8/_utils/auth-context";
-
-export default function Page(){
-    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
-    return(
-        <div>
-            <h1>Week 8
-            </h1>
-            <p>{user ? "Hi There" : "Please sign In"}</p>
-            {user && user.email}
-            {user && user.displayName}
-            <p>
-                {user ? (
-                    <button onClick={firebaseSignOut}>Sign Out</button>
-                ) : (
-                    <button onClick={gitHubSignIn}>Sign in with GitHub</button>
-                )}
-            </p>
-        </div>
-    );
-}
+// Import the useUserAuth hook
+import { useUserAuth } from "./_utils/auth-context";
+ 
+// Use the useUserAuth hook to get the user object and the login and logout functions
+const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+ 
+// Sign in to Firebase with GitHub authentication
+await gitHubSignIn();
+ 
+// Sign out of Firebase
+await firebaseSignOut();
+ 
+// Display some of the user's information
+<p>
+  Welcome, {user.displayName} ({user.email})
+</p>;

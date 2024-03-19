@@ -46,7 +46,7 @@ const ItemList = ({ items, onItemSelect }) => {
   
       
       {sortedItems.map((item) => (
-        <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item)} />
+        <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} onSelect={() => onItemSelect(item.name)} />
       ))}
     </div>
   );
