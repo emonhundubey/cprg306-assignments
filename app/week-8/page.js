@@ -9,7 +9,7 @@ export default function Page(){
             <h1>Week 8
             </h1>
             <p>{user ? "Hi There" : "Please sign In"}</p>
-            {/* {user.email} */}
+            {user && user.email}
             {user && user.displayName}
             <p>
                 {user ? (
