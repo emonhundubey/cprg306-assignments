@@ -25,6 +25,9 @@ export default function Page() {
       <div className="text-lg">
         <Link href="/week-8">Week 8 Assignments</Link>
         </div>
+      <div className="text-lg">
+        <Link href="/week-9">Week 10 Assignments</Link>
+      </div>
     </main>
   );
 }
