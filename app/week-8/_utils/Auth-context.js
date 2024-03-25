@@ -40,3 +40,5 @@ export const AuthContextProvider = ({ children }) => {
 export const useUserAuth = () => {
   return useContext(AuthContext);
 };
+
+// Path: app/week-8/_utils/Firebase.js
